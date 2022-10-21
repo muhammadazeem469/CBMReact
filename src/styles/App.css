@@ -1,0 +1,25 @@
+.customcontainer {
+    margin: 10px;
+  }
+
+.customcarddescription {
+  display: flex;
+  height: 50px;
+}
+
+.controltextflow {
+  display: block;
+  overflow: hidden;
+  max-height: 3em;
+  text-overflow: ellipsis;
+}
+
+ input, textarea {
+  outline: none !important;
+  box-shadow: none !important; 
+}
+.fullcontainer {
+  height: 100% !important;
+}
+
+
