@@ -1,7 +1,7 @@
 import {useState , useEffect} from "react";
 import baseURL from "../apis/restApi";
 
-const useCompany = () => {
+const ListCompany = () => {
 
     const [companisList, setCompaniesList] = useState([])
     useEffect(()=>{
@@ -11,7 +11,7 @@ const useCompany = () => {
     },[])
 
     const HitApi = async () => {
-        const response = await  baseURL.get('/')
+        const response = await  baseURL.get('/company')
             setCompaniesList(response.data)
         }
 
@@ -20,4 +20,4 @@ const useCompany = () => {
 
 }
 
-export default useCompany
+export default ListCompany

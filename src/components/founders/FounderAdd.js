@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import AddNewFounder from "../../customhooks/AddNewFounder";
 
 
-const FounderCreate = ({passingObject,id}) => {
+const FounderAdd = ({passingObject,id}) => {
     const [founderObject, setfounderObject] = useState({FullName: passingObject.FullName,Title: passingObject.Title})
     const { register, handleSubmit, formState: { errors } } = useForm();
     const [responseRequest,HitApi] = AddNewFounder()
@@ -47,7 +47,7 @@ const FounderCreate = ({passingObject,id}) => {
                             />
                         </div>
                         {errors.Title && <p>Please check the Title</p>}
-                        <button className="ui button" type="submit">Submit</button>
+                        <button className="ui button" type="submit">Add</button>
                     </form>
                 </div>
             </div>
@@ -57,4 +57,4 @@ const FounderCreate = ({passingObject,id}) => {
 }
 
 
-export default FounderCreate
+export default FounderAdd

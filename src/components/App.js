@@ -2,10 +2,9 @@ import React, {useState} from "react";
 import '../styles/App.css'
 import { BrowserRouter, Route ,Routes} from 'react-router-dom';
 import CompaniesList from "./companies/ComponiesList";
-import CompanyCreate from "./companies/CompanyCreate";
+import CompanyAdd from "./companies/CompanyAdd";
 import CompanyEdit from "./companies/CompanyEdit";
-import CompanyShow from './companies/CompanyShow';
-import CompanyDelete from './companies/CompanyDelete'
+import CompanyDetail from './companies/CompanyDetail';
 
 
 
@@ -16,10 +15,9 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" exact element={<CompaniesList />} />
-          <Route path="/company/new" element={<CompanyCreate />} />
+          <Route path="/company/add" element={<CompanyAdd />} />
           <Route path="/company/edit/:id" element={<CompanyEdit />} />
-          <Route path="/company/delete" element={<CompanyDelete />} />
-          <Route path="/company/show/:id" element={<CompanyShow />} />
+          <Route path="/company/detail/:id" element={<CompanyDetail />} />
         </Routes>
       </BrowserRouter>
         

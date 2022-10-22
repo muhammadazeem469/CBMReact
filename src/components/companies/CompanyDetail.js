@@ -6,7 +6,7 @@ import DeleteCompany from "../../customhooks/DeleteCompany";
 import { useNavigate } from 'react-router-dom';
 import FoundersList from "../founders/FoundersList";
 
-const CompanyShow = () => {
+const CompanyDetail = () => {
     const {id} = useParams()
     const [companyObject] = EditCompany(id)
     const [HitApi] = DeleteCompany(id)
@@ -82,8 +82,7 @@ const CompanyShow = () => {
         )
 }
 
-export default CompanyShow
+export default CompanyDetail
 
-//<FoundersList title={"Founders"} List={companyObject.Founders} />
 
 

@@ -1,41 +1,44 @@
 import React from "react";
 import '../../styles/App.css'
 import CompanyItem from "../basiccomponent/CompanyItem";
-import useCompany from "../../customhooks/useCompany";
+import ListCompany from "../../customhooks/ListCompany";
 import { useNavigate } from 'react-router-dom';
 
 
 
 const CompaniesList = () => {
-    const [companisList] = useCompany()
+    const [companisList] = ListCompany()
     const navigate = useNavigate();
 
 
     const renderedList = companisList.map((company)=>{
          return <CompanyItem key={company.id} company={company} />
      })
+     const onClick = () => {
+        navigate(`/company/add`)
+     }
      return(
         <div className="ui fluid card fullcontainer">
             <div className="content">
                 <div className="header">Companies List</div>
                 <div className="meta">
-                <span className="right floated time">2 days ago</span>
-                <span className="category">Animals</span>
+                <span className="right floated time"></span>
+                <span className="category"></span>
                 </div>
                 <div className="description">
-                <div classNameName="ui relaxed divided list">
+                <div className="ui relaxed divided list">
                     {renderedList}
                 </div>
                 </div>
             </div>
             <div className="extra content">
                 <div className="right floated author">
-                <button class="ui button" onClick={() => {navigate(`/company/new`)}}>
+                <button className="ui button" onClick={onClick}>
                     Add Company
                 </button>
                 </div>
             </div>
-            </div>
+        </div>
         
         )
  }

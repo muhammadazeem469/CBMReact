@@ -10,7 +10,7 @@ const AddNewCompany = () => {
     const navigate = useNavigate();
 
     const HitApi = async (companyObject) => {
-        const response = await  baseURL.post('/add',{
+        const response = await  baseURL.post('/company/add',{
             "CompanyName": companyObject.CompanyName, 
             "City": companyObject.City,
             "State" : companyObject.State,

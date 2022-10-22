@@ -11,8 +11,7 @@ const DeleteCompany = (id) => {
 
 
     const HitApi = async () => {
-        const response = await  baseURL.delete(`/delete/${id}`)
- //       setresponseRequest(response)
+        const response = await  baseURL.delete(`/company/delete/${id}`)
         navigate(`/`)
 
         }

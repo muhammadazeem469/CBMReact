@@ -15,12 +15,12 @@ const EditCompany = (id) => {
     },[])
 
     const getInformation = async (id) => {
-        const response = await  baseURL.get(`/id/${id}`)
+        const response = await  baseURL.get(`/company/id/${id}`)
         setcompanyObject(response.data)
     }
 
     const HitApi = async (companyObject) => {
-        const response = await  baseURL.put(`/update/${id}`,{
+        const response = await  baseURL.put(`/company/update/${id}`,{
             "CompanyName": companyObject.CompanyName, 
             "City": companyObject.City,
             "State" : companyObject.State,
@@ -28,7 +28,7 @@ const EditCompany = (id) => {
             "FoundedDate": companyObject.FoundedDate,
         })
  //       setresponseRequest(response)
-        navigate(`/company/show/${id}`)
+        navigate(`/company/detail/${id}`)
 
         }
 

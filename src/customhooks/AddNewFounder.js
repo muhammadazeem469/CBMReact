@@ -11,7 +11,7 @@ const AddNewFounder = () => {
    // console.log(companyObject)
 
     const HitApi = async (founderObject,id) => {
-        const response = await  baseURL.post('/founders/add',{
+        const response = await  baseURL.post('/founder/add',{
                  "FullName":founderObject.FullName, 
                  "Title":founderObject.Title,
                  "company_id": id

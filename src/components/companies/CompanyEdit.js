@@ -7,7 +7,7 @@ const CompanyEdit = () => {
     const {id} = useParams()
     const [companyObject,HitApi] = EditCompany(id)
     return (<div className='ui fluid card'>
-            {companyObject && <Form Heading={'Edit Company'} passingObject={companyObject}  HitApi={HitApi}/>}
+            {companyObject && <Form Heading={'Edit Company'} passingObject={companyObject}  HitApi={HitApi} ButtonText={'Save'}/>}
         </div>)
 }
 

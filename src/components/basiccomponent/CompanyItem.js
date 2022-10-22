@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 const CompanyItem = ({company}) => {
     const navigate = useNavigate();
     const onNavigation = () => {
-        navigate(`/company/show/${company.id}`)
+        navigate(`/company/detail/${company.id}`)
     }
     
     return(
@@ -18,7 +18,7 @@ const CompanyItem = ({company}) => {
                             <div className="6 wide column">| {company.City} {company.State}</div>
                             <div className="3 wide column">
                                 <div onClick={onNavigation} className="ui item right floated">
-                                    <h6 className="ui header">Read More</h6>
+                                    <button class="ui primary basic button">Detail</button>
                                 </div>
                                 
                             </div>

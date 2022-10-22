@@ -2,7 +2,7 @@ import React,{useState} from "react";
 import { useForm } from "react-hook-form";
 
 
-const Form = ({Heading,passingObject,HitApi}) => {
+const Form = ({Heading,passingObject,HitApi,ButtonText}) => {
 
     const [companyObject, setCompanyObject] = useState({CompanyName: passingObject.CompanyName,City: passingObject.City,State: passingObject.State,Description:passingObject.Description, FoundedDate:passingObject.FoundedDate})
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -55,7 +55,7 @@ const Form = ({Heading,passingObject,HitApi}) => {
                                 {...register("City", { required: true})}
                                 />
                             </div>
-                            {errors.CompanyName && <p>Please check the First Name</p>}
+                            {errors.City && <p>Please check the First Name</p>}
                         </div>
                         <div className="field">
                             <label>State</label>
@@ -69,7 +69,7 @@ const Form = ({Heading,passingObject,HitApi}) => {
                                     {...register("State", { required: true})}
                                 />
                             </div>
-                            {errors.CompanyName && <p>Please check the First Name</p>}
+                            {errors.State && <p>Please check the First Name</p>}
                         </div>
                         <div className="field">
                             <label>Date</label>
@@ -93,10 +93,10 @@ const Form = ({Heading,passingObject,HitApi}) => {
                             {...register("Description", { required: true})}
                         >
                         </textarea>
-                        {errors.CompanyName && <p>Please check the Descritpion</p>}
+                        {errors.Description && <p>Please check the Descritpion</p>}
                     </div>
                     <div className="field">
-                        <button  id="form-button-control-public" className="ui button">Confirm</button>
+                        <button  id="form-button-control-public" className="ui button">{ButtonText}</button>
                     </div>
                 </form>
             </div>
