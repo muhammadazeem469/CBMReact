@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Getting Started with React App
 
 This project has a backend api with my CBMRestApis.So First go to https://github.com/muhammadazeem469/CBMRestApislink and follow the instructions to set it up.
 
