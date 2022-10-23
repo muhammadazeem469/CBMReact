@@ -18,7 +18,7 @@ const CompanyItem = ({company}) => {
                             <div className="6 wide column">| {company.City} {company.State}</div>
                             <div className="3 wide column">
                                 <div onClick={onNavigation} className="ui item right floated">
-                                    <button class="ui primary basic button">Detail</button>
+                                    <button className="ui primary basic button">Detail</button>
                                 </div>
                                 
                             </div>

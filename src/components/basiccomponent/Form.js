@@ -73,7 +73,7 @@ const Form = ({Heading,passingObject,HitApi,ButtonText}) => {
                         </div>
                         <div className="field">
                             <label>Date</label>
-                                <input 
+                                <input
                                     type="date" 
                                     name='FoundedDate' 
                                     onChange={handleChange}
