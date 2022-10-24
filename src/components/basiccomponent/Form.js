@@ -26,21 +26,22 @@ const Form = ({Heading,passingObject,HitApi,ButtonText}) => {
             <h3 className='ui divider'>
             </h3>
             <div className="description">
-                <form onSubmit={handleSubmit(onSubmitForm)} className="ui form">
+                <form data-testid="form" onSubmit={handleSubmit(onSubmitForm)} className="ui form">
                     <div className="field">
                         <label>Company Name</label>
                         <div className="ui fluid input">
                             <input 
                                 name="CompanyName"
-                                aria-invalid={errors.name ? "true" : "false"} 
+                              //  aria-invalid={errors.name ? "true" : "false"} 
                                 type="text" 
                                 defaultValue={companyObject.CompanyName}
                                 onChange={handleChange} 
                                 placeholder="Company Name"
+                                data-testid="CompanyName"
                                 {...register("CompanyName", { required: true})}
                              />
                         </div>
-                        {errors.CompanyName && <p>Please check the First Name</p>}
+                        {errors.CompanyName && <p data-testid="ErrorName">Please check the Company Name</p>}
                     </div>
                     <div className="equal width fields">
                         <div className="field">
@@ -52,10 +53,11 @@ const Form = ({Heading,passingObject,HitApi,ButtonText}) => {
                                 name="City" 
                                 onChange={handleChange} 
                                 placeholder="City"
+                                data-testid="City"
                                 {...register("City", { required: true})}
                                 />
                             </div>
-                            {errors.City && <p>Please check the First Name</p>}
+                            {errors.City && <p data-testid="ErrorCity">Please check the City</p>}
                         </div>
                         <div className="field">
                             <label>State</label>
@@ -66,10 +68,11 @@ const Form = ({Heading,passingObject,HitApi,ButtonText}) => {
                                     defaultValue={companyObject.State}
                                     onChange={handleChange}  
                                     placeholder="State"
+                                    data-testid="State"
                                     {...register("State", { required: true})}
                                 />
                             </div>
-                            {errors.State && <p>Please check the First Name</p>}
+                            {errors.State && <p data-testid="ErrorState">Please check the State</p>}
                         </div>
                         <div className="field">
                             <label>Date</label>
@@ -78,6 +81,7 @@ const Form = ({Heading,passingObject,HitApi,ButtonText}) => {
                                     name='FoundedDate' 
                                     onChange={handleChange}
                                     defaultValue={companyObject.FoundedDate}
+                                    data-testid="FoundedDate"
                                     {...register("FoundedDate", { required: false})} 
                                 />
                         </div>
@@ -90,13 +94,14 @@ const Form = ({Heading,passingObject,HitApi,ButtonText}) => {
                             onChange={handleChange} 
                             placeholder="Description" 
                             rows="3"
+                            data-testid="Description"
                             {...register("Description", { required: true})}
                         >
                         </textarea>
-                        {errors.Description && <p>Please check the Descritpion</p>}
+                        {errors.Description && <p data-testid="ErrorDescription">Please check the Descritpion</p>}
                     </div>
                     <div className="field">
-                        <button  id="form-button-control-public" className="ui button">{ButtonText}</button>
+                        <button  data-testid="submit" className="ui button">{ButtonText}</button>
                     </div>
                 </form>
             </div>
