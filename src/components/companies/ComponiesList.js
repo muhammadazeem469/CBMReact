@@ -20,13 +20,13 @@ const CompaniesList = () => {
      return(
         <div className="ui fluid card fullcontainer">
             <div className="content">
-                <div className="header">Companies List</div>
+                <div className="header" data-testid="heading">Companies List</div>
                 <div className="meta">
                 <span className="right floated time"></span>
                 <span className="category"></span>
                 </div>
                 <div className="description">
-                <div className="ui relaxed divided list">
+                <div data-testid="renderlist" className="ui relaxed divided list">
                     {renderedList}
                 </div>
                 </div>

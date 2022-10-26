@@ -34,7 +34,7 @@ describe("Add Company Data", () => {
   
     
   
-   /* describe("with empty CompanyName", () => {
+    describe("with empty CompanyName", () => {
       it("renders the CompanyName validation error", async () => {
         const companyObject = {CompanyName: "",City: "",State: "",FoundedDate: "",Description: ""}
         const {getByTestId} = render(<Form Heading={'Create A New Company'} passingObject={companyObject}  ButtonText={'Add'}/>)
@@ -98,5 +98,5 @@ describe("Add Company Data", () => {
           expect(getByTestId("ErrorDescription").innerHTML).toEqual("Please check the Descritpion")
     
         })
-      })*/
+      })
   })

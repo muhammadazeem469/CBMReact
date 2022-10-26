@@ -8,7 +8,7 @@ const Form = ({Heading,passingObject,HitApi,ButtonText}) => {
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     const onSubmitForm = (data) => {
-        console.log(data)
+     //   console.log(data)
         HitApi(data)
      }
 
