@@ -3,5 +3,5 @@ import axios from "axios"
 
 
 export default axios.create({
-    baseURL : 'http://44.202.24.135:3001/',
+    baseURL : 'http://3.82.232.179:3000/',
 })
