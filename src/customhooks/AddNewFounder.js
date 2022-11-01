@@ -8,7 +8,6 @@ const AddNewFounder = () => {
 
     const [responseRequest, setresponseRequest] = useState()
     const navigate = useNavigate();
-   // console.log(companyObject)
 
     const HitApi = async (founderObject,id) => {
         const response = await  baseURL.post('/founder/add',{
@@ -17,7 +16,7 @@ const AddNewFounder = () => {
                  "company_id": id
         })
         setresponseRequest(response)
-        window.location.reload()
+        navigate(0)
 
         }
 
